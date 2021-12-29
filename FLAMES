@@ -1,0 +1,39 @@
+i=0
+j=0
+name1=str(input("Enter the first name="))
+name2=str(input("Enter the second name="))
+name1list=[]
+name2list=[]
+flames=["f","l","a","m","e","s"]
+count1=0
+count2=0
+for i in range(len(name1)):
+    name1list.append(name1[i])
+for i in range(len(name2)):
+    name2list.append(name2[i])
+for i in range(len(name1list)):
+    for j in range(len(name2list)):
+            if name1list[i]==name2list[j]:
+                    name1list.pop(i)
+                    name1list.insert(i,0)
+                    name2list.pop(i)
+                    name2list.insert(j,0)
+for i in range(len(name1list)):         
+        if name1list[i]!=0:
+                count1=count1+1
+for j in range(len(name1list)):         
+        if name2list[j]!=0:
+                count2=count2+1
+tot=count1+count2
+if tot==1 or tot==7 or tot==13 or tot==19:
+            print(name1,"and",name2,"ARE BEST FRIENDS")
+if tot==2 or tot==8 or tot==14 or tot==20:
+            print(name1,"and",name2,"ARE LOVERS")
+if tot==3 or tot==9 or tot==15 or tot==21:
+            print(name1,"and",name2,"HAVING AFFECTION")
+if tot==4 or tot==10 or tot==16 or tot==22:
+            print(name1,"and",name2,"GET MARRIED")
+if tot==5 or tot==11 or tot==17 or tot==23:
+            print(name1,"and",name2,"ARE ENEMIES")  
+if tot==6 or tot==12 or tot==18 or tot==24:
+            print(name2,"IS SISTER FOR YOU",name1)
